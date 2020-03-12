@@ -1,0 +1,22 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+PortGroup           github 1.0
+
+github.setup        troglobit editline 1.17.1
+categories          devel
+platforms           darwin
+
+use_autoreconf      yes
+autoreconf.args     -W portability -visfm
+
+description         A small replacement for GNU readline() for UNIX
+
+long_description    \
+    This is a small line editing library. It can be linked into almost any program to provide command line editing and history functions. It is call \
+    compatible with the FSF readline library, but at a fraction of the size, and as a result fewer features. It is also distributed under a much \
+    more liberal License.
+
+checksums           rmd160  c733c90727006fc818028a8973a90989fa0c505d \
+                    sha256  be4c72ffc43d47a92898e6f93ea1f532663f18c12f2b2eda3f85b942089a60bb \
+                    size    45140
