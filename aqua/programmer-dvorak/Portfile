@@ -1,0 +1,32 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+
+name                programmer-dvorak
+version             1.2.11
+categories          aqua
+platforms           darwin
+description         Programmer Dvorak Keyboard Layout
+long_description    ${description}
+homepage            https://www.kaufmann.no/roland/dvorak/
+
+distfiles           ProgrammerDvorak-1_2_11.pkg.zip
+master_sites        https://www.kaufmann.no/downloads/macos/
+
+checksums           rmd160  416e153d7a884cc7ce3fd42668451df63b98b1e4 \
+                    sha256  23163bdca0982d51d74bfcdd213ecb8f72b0d01299f5df133e0b93aaa59bce14 \
+                    size    12346
+
+use_zip             yes
+use_configure       no
+
+destroot.violate_mtree  yes
+
+build {}
+
+destroot {
+      set pkgpath "${workpath}/Programmer Dvorak v1.2.pkg"
+      system "installer -pkg \"${pkgpath}\" -target /"
+      xinstall -d -m 755 "${destroot}${prefix}/share/doc/${name}"
+      system "echo $name is a pkg port > ${destroot}${prefix}/share/doc/${name}/README"
+}
