@@ -3,10 +3,10 @@
 PortSystem          1.0
 PortGroup           bitbucket 1.0
 
-set emacs_version   27.0.90
-set emacs_mac_ver   59fa704
+set emacs_version   27.0.91
+set emacs_mac_ver   86c4d40
 
-bitbucket.setup     mituharu emacs-mac 59fa704
+bitbucket.setup     mituharu emacs-mac 86c4d40
 name                emacs-mac-app-n
 version             ${emacs_mac_ver}
 revision            0
@@ -21,9 +21,9 @@ long_description    ${name} is "Mac port" addition to GNU Emacs ${emacs_version}
 platforms           darwin
 license             GPL-3+
 
-checksums           rmd160  b1b92a7d759cb3883ccbae8f66c3a32daa660768 \
-                    sha256  232fb481b25be958b8a27e177ae8681b430039510513ed749fd3186b75ee2b45 \
-                    size    43498099
+checksums           rmd160  dbbb309841b15e0805ae0f81437a6fb016bd080c \
+                    sha256  2c881f52d4d5ba5a21f6968bea18306add8940fae3cb64415a55da0d5a5237fb \
+                    size    43535530
 
 depends_lib         port:ncurses \
                     port:libxml2 \
