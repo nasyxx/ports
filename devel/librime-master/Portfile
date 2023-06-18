@@ -4,9 +4,9 @@ PortSystem          1.0
 PortGroup           github 1.0
 PortGroup           cmake 1.1
 
-github.setup        rime librime f7a456937802d063a781baf37c8698cd6d6b305e
+github.setup        rime librime f2c7e40a0c1ec687cd9a3890132e00fef76e45d7
 name                librime-master
-version             20221012
+version             20230109
 categories          devel
 platforms           darwin
 license             BSD
@@ -26,6 +26,6 @@ depends_lib-append  port:boost \
 configure.args      -DBOOST_USE_CXX11=ON \
                     -DBUILD_TEST=OFF
 
-checksums           rmd160  02eb0829960d8379c980f25594606812ea2e2f60 \
-                    sha256  8327b5ffa16c37646d7fb127f8006c806845c9b64eaba529fbe97c71a807bc86 \
-                    size    2621445
+checksums           rmd160  742c063fa511b51fc23ba93f7c172c41531ae7b2 \
+                    sha256  554c95110f932bbae7082ddf6f8bdde4ec29c947134f662e8ca305c96fa98db2 \
+                    size    2621901
